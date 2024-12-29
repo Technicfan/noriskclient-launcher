@@ -22,7 +22,7 @@
       })
       if (typeof result == 'string' && result.length > 0) {
         const splitter = result.includes('\\') ? '\\' : '/';
-        if (!requiredFileName.includes("*") && !requiredFileName.includes(result.split(splitter).pop().split('.')[result.includes('.') ? result.split(splitter).pop().split('.').length - 2 : 0])) {
+        if (!requiredFileName.includes("*") && !requiredFileName.includes(result.split(splitter).pop().split('.')[result.split(splitter).pop().includes('.') ? result.split(splitter).pop().split('.').length - 2 : 0])) {
           addNotification(lang.fileInput.notification.invalidFileName.replace("{fileNames}", requiredFileName.map(f => `"${f}"`).join(" or ")));
           return;
         }
